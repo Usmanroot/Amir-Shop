@@ -1,0 +1,90 @@
+    {
+        "chips": [
+            {
+                "id": 1,
+                "name": "Nachos Purple - sausage chili",
+                "price": "11.000",
+                "image": "Nachos_purple",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "name": "Nachos Green - cheese",
+                "price": "11.000",
+                "image": "Nachos_green",
+                "rating": 3
+            },
+            {
+                "id": 3,
+                "name": "Nachos Orange - cheese chili",
+                "price": "11.000",
+                "image": "Nachos_orange",
+                "rating": 4
+            },
+            {
+                "id": 4,
+                "name": "Cheers Blue - sour cream and onion",
+                "price": "15.000",
+                "image": "Cheers_blue",
+                "rating": 4
+            },
+            {
+                "id": 5,
+                "name": "Cheers brown - barbecue",
+                "price": "15.000",
+                "image": "Cheers_brown",
+                "rating": 3
+            },
+            {
+                "id": 6,
+                "name": "Cheetos Normal",
+                "price": "11.000",
+                "image": "Cheetos_normal",
+                "rating": 4
+            }
+        ],
+        "drinks": [
+            {
+                "id": 7,
+                "name": "Pepsi small - 0.5",
+                "price": "13.000",
+                "image": "Pepsi05",
+                "rating": 5
+            },
+            {
+                "id": 8,
+                "name": "Coca cola small - 0.5",
+                "price": "14.000",
+                "image": "CocaCola05",
+                "rating": 4
+            },
+            {
+                "id": 9,
+                "name": "Sprite small - 0.5",
+                "price": "10.000",
+                "image": "Sprite05",
+                "rating": 3
+            },
+            {
+                "id": 10,
+                "name": "Pepsi medium - 1.0",
+                "price": "17.000",
+                "image": "Pepsi15",
+                "rating": 5
+            },
+            {
+                "id": 11,
+                "name": "CocaCola medium - 1.0",
+                "price": "16.000",
+                "image": "CocaCola15",
+                "rating": 4
+            },
+            {
+                "id": 12,
+                "name": "Hydrolife samll - 0.5",
+                "price": "10.000",
+                "image": "Hydrolife05",
+                "rating": 5
+            }
+        ]
+    }
