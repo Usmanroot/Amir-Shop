@@ -5,7 +5,10 @@ export default function Order() {
     const [classError, setClassError] = useState(false);
     const [nameError, setNameError] = useState(false);
 
-    const handleSubmit = (event) => {
+    const TELEGRAM_BOT_TOKEN = '8904095134:AAEAxpD269LdjRVWjth_nl5bNE2VA_PoGPo'; 
+    const TELEGRAM_CHAT_ID = '8169174686';
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const formData = new FormData(event.target);
@@ -22,10 +25,36 @@ export default function Order() {
         setNameError(isNameInvalid);
 
         if (!isOrderEmpty && !isClassInvalid && !isNameInvalid) {
-            event.target.reset();
-            setOrderError(false);
-            setClassError(false);
-            setNameError(false);
+            
+            let message = `📝 **Новый кастомный заказ!**\n\n`;
+            message += `👤 **Имя/Фамилия:** ${orderName}\n`;
+            message += `🏫 **Класс:** ${orderClass}\n\n`;
+            message += `📦 **Что заказали:**\n${orderValue}`;
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'Markdown',
+                    }),
+                });
+
+                if (response.ok) {
+                    alert("Заказ успешно отправлен в Telegram!");
+                    event.target.reset();
+                    setOrderError(false);
+                    setClassError(false);
+                    setNameError(false);
+                } else {
+                    throw new Error('Ошибка при отправке');
+                }
+            } catch (error) {
+                console.error("Ошибка TG:", error);
+                alert("Не удалось отправить. Проверь сеть.");
+            }
         }
     };
 
@@ -50,8 +79,7 @@ export default function Order() {
                 
                 <form className='flex flex-col items-center' onSubmit={handleSubmit}>
                     <label className='text-[30px] font-bold text-white'>Your order</label>
-                    <input 
-                        type="text" 
+                    <textarea 
                         className={orderInputClass} 
                         name='Order' 
                         placeholder={orderError ? 'Type smth bruh' : 'This place for your order'}
