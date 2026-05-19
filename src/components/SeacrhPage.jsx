@@ -37,8 +37,6 @@ export default function SeacrhPage() {
     "CocaCola15": CocaCola15,
     "Hydrolife05": Hydrolife05
   }
-
-
   return (
     <div className='max-w-[1800px] mx-auto p-[30px]'>
       <h1 className='text-4xl text-center font-bold mb-10'>Search results for: "{query}"</h1>

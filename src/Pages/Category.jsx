@@ -13,6 +13,9 @@ import Sprite05 from '../assets/Sprite05.png'
 import Pepsi15 from '../assets/Pepsi15.png'
 import CocaCola15 from '../assets/CocaCola15.png'
 import Hydrolife05 from '../assets/Hydrolife05.png'
+import Icetea_green from '../assets/Iceteam_green.png'
+import Icetea_brown from '../assets/Icetea_brown.png'
+import Flavisred05 from '../assets/Flavisred05.png'
 
 export default function Category() {
 
@@ -28,8 +31,10 @@ export default function Category() {
     "Sprite05": Sprite05,
     "Pepsi15": Pepsi15,
     "CocaCola15": CocaCola15,
-    "Hydrolife05": Hydrolife05
-
+    "Hydrolife05": Hydrolife05,
+    "Icetea_green": Icetea_green,
+    "Icetea_brown": Icetea_brown,
+    "Flavisred05": Flavisred05
   }
   return (
     <div className='max-w-[1800px] mx-auto p-[30px]'>
