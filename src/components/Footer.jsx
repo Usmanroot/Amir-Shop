@@ -3,7 +3,7 @@ import Target from '../assets/Target.png'
 
 export default function Footer() {
   return (
-    <footer className='w-full bg-[#001029] text-white py-16 mt-20'>
+    <footer className='w-full bg-[#001029] text-white py-16'>
       <div className='max-w-[1400px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-12'>
 
         <div className='flex flex-col gap-4'>
